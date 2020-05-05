@@ -43,7 +43,7 @@
                         a member please email us at  <strong>info@bbgdxb.com</strong> or go to <strong>Membership</strong>
                    </div>
 
-                    <div class="col-md-8 offset-md-2  login">
+                    <div class="col-md-8 offset-md-2  login wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
 
                   
                       <div class="sec-title center">

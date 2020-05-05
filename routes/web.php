@@ -21,6 +21,9 @@ Route::get('/about', 'PageController@About')->name('About');
 
 Route::get('/events', 'PageController@Event')->name('Event');
 Route::get('/member/login', 'PageController@MemberLogin')->name('MemberLogin');
+Route::get('/news', 'PageController@News')->name('News');
+Route::get('/contact', 'PageController@Contact')->name('Contact');
+Route::get('/membership','PageController@Membership')->name('Membership');
 
 Auth::routes();
 

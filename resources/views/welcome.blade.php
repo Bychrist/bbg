@@ -26,6 +26,68 @@
 </section>
 
 
+<section class="about-style1-area mbottom">
+
+    <div class="container">
+        
+        <div class="row ">
+            <div class="col-xl-6 col-lg-12">
+                <div class="about-style1-content wow fadeInLeft animated"  data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                    <div class="sec-title style-2 mt-5">
+                        <h2> Welcome To The <br> <span>British Business Group</span></h2>
+                    </div>
+                    <div class="inner-content">
+                       <div class="text text-justify" style="color:#000;">
+                            The British Business Group Dubai and Northern Emirates is a not-for-profit business group open to companies or individuals from the UK with business interests in the region. Our membership consists of british owned, Dubai based companies, UK registered organisations and UK passport holders. our aim is to be the go-to business group in the region, enabling our members to succeed in business by providing early access to opportunities and market intelligence, and hosting an average of 60 events per year. For more information, please contact the BBG business team on <strong>info@bbgdxb.com</strong>. We welcome all companies and individuals from the UK with business interests in Dubai and Northern Emirates to join us.
+                                                                            
+                                
+                        </div>
+                    
+            
+                     </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-12">
+                {{-- <div class="about-style1-right-content clearfix">
+                    <div class="about-style1-image-bg" style="max-height:300px;background-image:url(assets/images/team/team1.png);"></div>
+                 
+                </div> --}}
+
+
+                {{-- <div class="col-xl-6 col-lg-12"> --}}
+                    <div class="about-style1-right-content clearfix">
+                    <div class="about-style1-image-bg" style="background-image:url(assets/images/team/team1.png);"></div>
+                    <div class="inner-content-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <div class="icon-holder"></span></div>
+                        <p>&nbsp; <br>  <br> &nbsp;</p>
+                        <h6><span>&nbsp;</span> &nbsp;</h6>
+                        <div class="signature">
+                        <img src="assets/images/logo/logo.png" alt="Signature">
+                        </div>
+                        </div>
+                    </div>
+                    {{-- </div> --}}
+            </div>
+        </div>
+    
+    </div>
+</section>
+
+
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
 <section class="working-process padd-1">
     <div class="container">
     
@@ -35,12 +97,7 @@
         
         <div class="row">
             
-               
-               
-
-               
-
-              
+   
 
                         <div class="process-block col-md-6 col-sm-12 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
@@ -118,7 +175,7 @@
                         <div class="process-block col-md-6 col-sm-12 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
-                                <div class="count">01</div>
+                                <div class="count">&nbsp;</div>
                                 </div>
                             
                                
@@ -142,7 +199,7 @@
                         <div class="process-block col-md-6 col-sm-12 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
-                                <div class="count">04</div>
+                                <div class="count">&nbsp;</div>
                                 </div>
                             
                                
@@ -194,11 +251,11 @@
     <div class="about-style1-right-content clearfix">
     <div class="about-style1-image-bg" style="background-image:url(assets/images/resource/about-style1-bg.jpg);"></div>
     <div class="inner-content-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
-    <div class="icon-holder"><span class="icon fa fa-quote-right"></span></div>
-    <p>Message for <br> those on the social <br> platform</p>
-    <h6><span>CEO:</span> The name stays here</h6>
+    <div class="icon-holder"></span></div>
+    <p>&nbsp; <br>  <br> &nbsp;</p>
+    <h6><span>&nbsp;</span> &nbsp;</h6>
     <div class="signature">
-    <img src="assets/images/resource/signature.png" alt="Signature">
+    <img src="assets/images/logo/logo.png" alt="Signature">
     </div>
     </div>
     </div>

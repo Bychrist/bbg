@@ -23,5 +23,21 @@ class PageController extends Controller
         return view('memberlogin');
     }
 
+    public function News()
+    {
+        return view('news');
+    }
+
+    public function Contact()
+    {
+        return view('contact');
+    }
+
+
+    public function Membership()
+    {
+        return view('membership');
+    }
+
 
 }

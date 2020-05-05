@@ -40,6 +40,13 @@
 
 <link rel="stylesheet" href="{{asset('assets/css/style.css')}}">
 <link rel="stylesheet" href="{{asset('assets/css/responsive.css')}}">
+
+<style>
+    /* the pricing table */
+
+</style>
+
+
 </head>
 <body>
 <div class="boxed_wrapper">
@@ -88,12 +95,13 @@
     </button>
     <div class="collapse navbar-collapse" id="sitemenu">
         <ul class="navigation main_menu ml-auto clearfix">
-            <li class="{{Request::is('/about') ? "current" : ""}} "><a href="{{url('/about')}}">About BBG</a></li>
-            <li class="{{Request::is('/membership') ? "current" : ""}}  "><a href="{{url('/membership')}}">Membership</a></li>
-            <li class="{{Request::is('/events') ? "current" : ""}}  "><a href="{{url('/events')}}">Events</a></li>
-            <li class="{{Request::is('/directory') ? "current" : ""}}  "><a href="{{url('/directory')}}">Directory</a></li>
-            <li class="{{Request::is('/news') ? "current" : ""}}  "><a href="{{url('/news')}}">News</a></li>
-            <li class="{{Request::is('/contact') ? "current" : ""}}  "><a href="{{url('/contact')}}">Contact Us</a></li>
+            <li class="{{Request::is('/') ? "current" : ""}} "><a href="{{url('/')}}">Home </a></li>
+            <li class="{{Request::is('about') ? "current" : ""}} "><a href="{{url('/about')}}">About BBG</a></li>
+            <li class="{{Request::is('membership') ? "current" : ""}}  "><a href="{{url('/membership')}}">Membership</a></li>
+            <li class="{{Request::is('events') ? "current" : ""}}  "><a href="{{url('/events')}}">Events</a></li>
+            <li class="{{Request::is('directory') ? "current" : ""}}  "><a href="{{url('/directory')}}">Directory</a></li>
+            <li class="{{Request::is('news') ? "current" : ""}}  "><a href="{{url('/news')}}">News</a></li>
+            <li class="{{Request::is('contact') ? "current" : ""}}  "><a href="{{url('/contact')}}">Contact Us</a></li>
 
         </ul>
      
@@ -124,11 +132,11 @@
         <div class="widget-content">
         <ul class="list">
         <li><a href="{{url('/about')}}">About</a></li>
-        <li><a href="service.html">Membership</a></li>
-        <li><a href="team.html">Events</a></li>
+        <li><a href="{{url('/membership')}}">Membership</a></li>
+        <li><a href="{{url('/events')}}">Events</a></li>
         <li><a href="our-projects.html">Directory</a></li>
-        <li><a href="blog-grid.html">News</a></li>
-        <li><a href="contact.html">Contact Us</a></li>
+        <li><a href="{{url('news')}}">News</a></li>
+        <li><a href="{{url('contact')}}">Contact Us</a></li>
         </ul>
         </div>
         </div>
