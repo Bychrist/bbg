@@ -12,8 +12,8 @@
                         <div class="wel">
 
                       
-                           <center> <h3>About BBG Membership</h3></center>
-                            <h1>
+                            <h3 class="text-center" >About BBG Membership</h3>
+                            <h1 class="text-center" >
                                 About BBG Membership
                             </h1>
                      </div>

@@ -25,6 +25,41 @@
     </div>
 </section>
 
+<section class="working-process padd-1">
+        <div class="container">
+
+           
+            
+            <div class="row">
+                <div class="process-block col-md-9 mx-auto col-sm-12 col-xs-12">
+                
+                    <div style="padding:80px 80px 50px 80px;" class=" inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+            
+                        <div class="text text-center pad">
+
+                            <div class="sec-title center welwel" style="margin-bottom:20px;">
+                                <h2>Welcome To The <span>British Business Group</span></h2>
+                            </div>
+                           <p class="text-center">
+                                The British Business Group Nigeria was formed in 19… and has been instrumental in the success of British business since that date. The BBG is a not-for-profit business group open to companies and individuals from the UK with business interests in the country. Our membership consists of British-owned, Nigeria-based companies, UK registered organisations and UK passport holders. Our aim is to support British business in Nigeria, enabling our members to succeed by providing early access to opportunities and market intelligence. We are proud to be the most successful business networking group in Nigeria with new business being generated for group members on a daily basis.
+                           </p>
+                           <p class="text-center">
+                               Our monthly business networking events are attended by members across a wide range of industry backgrounds and representatives from the British Deputy High Commission. For more information and to apply for membership, please proceed to our Application page.
+                           </p>
+                            <p class="text-center">
+                                We welcome all companies and individuals from the UK with business interests in Nigeria to join us.
+                            </p>
+                        </div>
+                     
+                    </div>
+                </div>
+            </div>
+        </div>
+</section>
+
+
+
+
 
 <section class="about-style1-area mbottom">
 
@@ -34,11 +69,16 @@
             <div class="col-xl-6 col-lg-12">
                 <div class="about-style1-content wow fadeInLeft animated"  data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
                     <div class="sec-title style-2 mt-5">
-                        <h2> Welcome To The <br> <span>British Business Group</span></h2>
+                        <h2>Welcome from the <br> <span>BBG Chairman </span></h2>
                     </div>
                     <div class="inner-content">
                        <div class="text text-justify" style="color:#000;">
-                            The British Business Group Dubai and Northern Emirates is a not-for-profit business group open to companies or individuals from the UK with business interests in the region. Our membership consists of british owned, Dubai based companies, UK registered organisations and UK passport holders. our aim is to be the go-to business group in the region, enabling our members to succeed in business by providing early access to opportunities and market intelligence, and hosting an average of 60 events per year. For more information, please contact the BBG business team on <strong>info@bbgdxb.com</strong>. We welcome all companies and individuals from the UK with business interests in Dubai and Northern Emirates to join us.
+                            <p>
+                               Welcome to the British Business Group in Nigeria.  We are proud to be the most effective business networking and support group in the country with a membership of more than 300 individuals. All UK passport holders are encouraged to join and will be made most welcome to the group. We meet once per month for a meeting which includes a briefing by the British Deputy High Commission, a main talk on a subject of interest and up to three Member Introductory Talks (MITs) where members can showcase their own companies. We are pleased to remain a group with free membership and only charge for the cost of refreshments at meetings where sponsorship does not cover this.  Please visit our ‘Apply for Membership’ page and enter your relevant contact details and UK passport to commence the registration process.
+
+
+                            </p>
+                        
                                                                             
                                 
                         </div>
@@ -79,15 +119,6 @@
 
 
 
-
-
-
-
-
-
-
-
-
 <section class="working-process padd-1">
     <div class="container">
     
@@ -95,11 +126,11 @@
             <h2>Upcoming <span>Events</span></h2>
         </div>
         
-        <div class="row">
+        <div class="row paddMedia">
             
    
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
+                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
                                 <div class="count">01</div>
@@ -123,7 +154,7 @@
 
 
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
+                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
                                 <div class="count">04</div>
@@ -163,7 +194,7 @@
             <h2>Latest <span>News</span></h2>
         </div>
         
-        <div class="row">
+        <div class="row paddMedia">
             
                
                
@@ -172,7 +203,7 @@
 
               
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
+                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
                                 <div class="count">&nbsp;</div>
@@ -196,7 +227,7 @@
 
                         
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
+                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
                                 <div class="count">&nbsp;</div>

@@ -51,31 +51,31 @@
 <body>
 <div class="boxed_wrapper">
 
-<header class="top-bar" style="background:#fff;border:none">
-<div class="container" style="border: none;">
-<div class="clearfix">
+<header class="top-bar" style="background:#fff;">
+<div class="container" style="">
+    <div class="clearfix">
 
-<ul class="top-bar-text float_left  d-none d-md-block" style=" padding:3px 0px -0px 2px;margin-bottom:-10px" >
-  
-    <li><a href="javascript:void(0)" ><i style="color: #ccc" class="fa fa-facebook"></i></a></li>
-    <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-twitter"></i></a></li>
-    <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-linkedin"></i></a></li> 
-    <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-youtube"></i></a></li>
-</ul>
-<ul class="social-style-one float_right" style="padding-bottom: -10px;">
+        <ul class="top-bar-text float_left  d-none d-md-block" style=" padding:3px 0px -0px 2px;margin-bottom:-10px" >
+        
+            <li><a href="javascript:void(0)" ><i style="color: #ccc" class="fa fa-facebook"></i></a></li>
+            <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-twitter"></i></a></li>
+            <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-linkedin"></i></a></li> 
+            <li><a href="javascript:void(0)"><i  style="color: #ccc" class="fa fa-youtube"></i></a></li>
+        </ul>
+        <ul class="social-style-one float_right" style="padding-bottom: -10px;">
 
-<li>
-<a href="{{url('member/login')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one"> <i class="fa fa-user" aria-hidden="true"></i> MEMBERSHIP LOGIN</a>
-   
+        <li>
+        <a href="{{url('member/login')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one"> <i class="fa fa-user" aria-hidden="true"></i> MEMBERSHIP LOGIN</a>
+        
 
-</li>
-<li>
+        </li>
+        <li>
 
-        <a href="javascript:void(0)" style="font-size: 10px !important;padding:5px" class="btn-style-one">APPLY FOR MEMBERSHIP</a>
-   
-</li>
-</ul>
-</div>
+                <a href="javascript:void(0)" style="font-size: 10px !important;padding:5px" class="btn-style-one">APPLY FOR MEMBERSHIP</a>
+        
+        </li>
+        </ul>
+    </div>
 </div>
 <hr>
 </header>
@@ -217,48 +217,51 @@
 
 <div class="preloader"></div>
 
-<script src="{{asset('assets/js/jquery.js')}}"></script>
-<script src="{{asset('assets/js/jquery-migrate-3.0.0.min.js')}}"></script>
+<script src="assets/js/jquery.js"></script>
+<script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+
 <script>
     $(document).ready(function () {
+
         $('#iconmenu').click(function (e) { 
-           $('#sitemenu').toggle();
+           $('#sitemenu').show();
 
             
         });
     });
  </script>
 
-<script src="{{asset('assets/js/popper.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
-<script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
-<script src="{{asset('assets/js/jquery.bootstrap-touchspin.js')}}"></script>
+<script src="assets/js/popper.min.js"></script>
+<script src="assets/js/bootstrap.min.js"></script>
+<script src="assets/js/bootstrap-select.min.js"></script>
+<script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+
+<script src="assets/js/jquery-ui.js"></script>
+
+<script src="assets/js/owl.carousel.min.js"></script>
+
+<script src="assets/js/jquery.validate.min.js"></script>
+
+<script src="assets/js/wow.js"></script>
+
+<script src="assets/js/jquery.mixitup.min.js"></script>
+
+<script src="assets/js/jquery.fancybox.pack.js"></script>
+
+<script src="assets/js/nouislider.js"></script>
+
+<script src="assets/js/isotope.js"></script>
+
+<script src="assets/js/jquery.appear.js"></script>
+
+<script src="assets/js/jquery.countTo.js"></script>
+
+<script src="assets/js/imagezoom.js"></script>
+
+<script src="assets/js/custom.js"></script>
 
 
 
-<script src="{{asset('assets/js/jquery-ui.js')}}"></script>
-
-<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
-
-<script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
-
-<script src="{{asset('assets/js/wow.js')}}"></script>
-
-<script src="{{asset('assets/js/jquery.mixitup.min.js')}}"></script>
-
-<script src="{{asset('assets/js/jquery.fancybox.pack.js')}}"></script>
-
-<script src="{{asset('assets/js/nouislider.js')}}"></script>
-
-<script src="{{asset('assets/js/isotope.js')}}"></script>
-
-<script src="{{asset('assets/js/jquery.appear.js')}}"></script>
-
-<script src="{{asset('assets/js/jquery.countTo.js')}}"></script>
-
-<script src="{{asset('assets/js/imagezoom.js')}}"></script>
-
-<script src="{{asset('assets/js/custom.js')}}"></script>
 </div>
 </body>
 

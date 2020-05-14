@@ -12,8 +12,8 @@
                         <div class="wel">
 
                       
-                           <center> <h3>Our Upcoming Events</h3></center>
-                            <h1>
+                            <h3 class="text-center">Our Upcoming Events</h3>
+                            <h1 class="text-center">
                                  About Upcoming BBG  Events
                             </h1>
                      </div>
@@ -33,7 +33,7 @@
             <h2>Upcoming <span>Events</span></h2>
         </div>
         
-        <div class="row">
+        <div class="row paddMedia">
             
                
                

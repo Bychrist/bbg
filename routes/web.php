@@ -27,4 +27,9 @@ Route::get('/membership','PageController@Membership')->name('Membership');
 
 Auth::routes();
 
+
+// =====================admin routes
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('view/events', 'EventController@index');
+
+//=======================admin routes

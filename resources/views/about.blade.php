@@ -12,8 +12,8 @@
                         <div class="wel">
 
                       
-                           <center> <h3>About Us</h3></center>
-                            <h1>
+                           <h3 class="text-center">About Us</h3>
+                            <h1 class="text-center">
                                 About BBG
                             </h1>
                      </div>
@@ -28,46 +28,68 @@
 
 
 
-<section class="loginsection">
-     <div class="row">
-       
-           
-             <div class="col-md-12">
 
-               
+<section class="about-style1-area mbottom">
 
-
-                    <div class="col-md-10 offset-md-1   welcomeabout">
-
-                  
-                      <div class="sec-title center">
-                        <h2>About <span> BBG</span></h2>
-                      </div>
-
-                      <div class="welcomemessage">
-                          <p>
-                            The British Business Group Nigeria was formed in 19… and has been instrumental in the success of British business since that date. The BBG is a not-for-profit business group open to companies and individuals from the UK with business interests in the country. Our membership consists of British-owned, Nigeria-based companies, UK registered organisations and UK passport holders. Our aim is to support British business in Nigeria, enabling our members to succeed by providing early access to opportunities and market intelligence. We are proud to be the most successful business networking group in Nigeria with new business being generated for group members on a daily basis.
-                          </p>
-                          <p>
-                            Our monthly business networking events are attended by members across a wide range of industry backgrounds and representatives from the British Deputy High Commission. For more information and to apply for membership, please proceed to our Application page.
-                          </p>
-                          <p>
-                            We welcome all companies and individuals from the UK with business interests in Nigeria to join us.
-                          </p>
-
-                      </div>
-
-                       
-                  
-
-                    </div>
-
-
-             </div>
-         
+    <div class="container">
         
-     </div>
+        <div class="row ">
+            <div class="col-xl-6 col-lg-12">
+                <div class="about-style1-content wow fadeInLeft animated"  data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+                    <div class="sec-title style-2 mt-5">
+                        <h2>Roy <span>Napier </span></h2>
+                    </div>
+                    <div class="inner-content">
+                       <div class="text text-justify" style="color:#000;">
+                            <p>
+                             Roy was voted on to the BBG committee in November 2019 while working in the Christmas party sub committee. He is active across the whole BBG membership and enthusiastic to connect members with business needs to those who have business solutions which meet those needs.  Roy will normally be found at the gate or the front door at any BBG event to welcome all arrivals and has continued this role during the recent Coronavirus restrictions which have seem the meetings transition over to an interactive format using Zoom.
+
+
+                            </p>
+
+                            <p>
+                                Having lived and worked in Nigeria between 1995 and 2000 then again since 2019, Roy has a good understanding of the business and social culture and the Oil & Gas industry network in particular.
+                            </p>
+                        
+                                                                            
+                                
+                        </div>
+                    
+            
+                     </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-12">
+                {{-- <div class="about-style1-right-content clearfix">
+                    <div class="about-style1-image-bg" style="max-height:300px;background-image:url(assets/images/team/team1.png);"></div>
+                 
+                </div> --}}
+
+
+                {{-- <div class="col-xl-6 col-lg-12"> --}}
+                    <div class="about-style1-right-content clearfix">
+                    <div class="about-style1-image-bg" style="background-image:url(assets/images/team/team2.jpg);"></div>
+                    <div class="inner-content-box wow fadeInUp animated" data-wow-delay="300ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 300ms; animation-name: fadeInUp;">
+                        <div class="icon-holder"></span></div>
+                        <p>&nbsp; <br>  <br> &nbsp;</p>
+                        <h6><span>&nbsp;</span> &nbsp;</h6>
+                        <div class="signature">
+                        <img src="assets/images/logo/logo.png" alt="Signature">
+                        </div>
+                        </div>
+                    </div>
+                    {{-- </div> --}}
+            </div>
+        </div>
+    
+    </div>
 </section>
+
+
+
+
+
+
 
 
 <section class="working-process padd-1">
@@ -76,7 +98,7 @@
         <div class="sec-title center welwel">
             <h2>We Enable Members <span>To Succeed Business By:</span></h2>
         </div>
-        <div class="row">
+        <div class="row paddMedia">
 
             <div class="process-block col-md-3 col-sm-12 col-xs-12">
                 <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
@@ -128,7 +150,7 @@
     
         </div>
 
-        <div class="row">
+        <div class="row paddMedia">
 
             <div class="process-block col-md-3 col-sm-12 col-xs-12">
                 <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
