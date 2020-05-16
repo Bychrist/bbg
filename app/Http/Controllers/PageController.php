@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Event;
 use Illuminate\Http\Request;
 
 class PageController extends Controller
@@ -14,7 +15,20 @@ class PageController extends Controller
 
     public function Event()
     {
-        return view('event');
+        $events = Event::latest()->paginate(2);
+        return view('event',compact('events'));
+    }
+
+
+    public function EventShow($id)
+    {
+        try {
+            $event = Event::find($id);
+            return view('eventsingle', compact('event'));
+        } catch (\Throwable $th) {
+          
+                return back();
+        }
     }
 
 

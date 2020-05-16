@@ -103,7 +103,10 @@
         </div>
         <script src="https://code.jquery.com/jquery-3.4.1.min.js" crossorigin="anonymous"></script>
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+      
         <script src="{{asset('backend/js/scripts.js')}}"></script>
+      <script src="https://cdn.tiny.cloud/1/txt08ia2u2f5qs8d1jep7buztxn0gkv2e1fb5r1nhc6pqu2r/tinymce/5/tinymce.min.js" referrerpolicy="origin"></script>
+         @yield('script')
         <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js" crossorigin="anonymous"></script>
         <script src="{{asset('backend/assets/demo/chart-area-demo.js')}}"></script>
         <script src="{{asset('backend/assets/demo/chart-bar-demo.js')}}"></script>

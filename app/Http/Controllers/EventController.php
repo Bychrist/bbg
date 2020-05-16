@@ -2,8 +2,11 @@
 
 namespace App\Http\Controllers;
 
+use Image;
 use App\Event;
 use Illuminate\Http\Request;
+use File;
+
 
 class EventController extends Controller
 {
@@ -16,6 +19,7 @@ class EventController extends Controller
     {
         $events = Event::orderBy('created_at','desc')->paginate(10);
         return view('event.view_event', compact('events'));
+        
     }
 
     /**
@@ -25,7 +29,7 @@ class EventController extends Controller
      */
     public function create()
     {
-        return view('create_event');
+        return view('event.create_event');
     }
 
     /**
@@ -36,7 +40,33 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
-        
+
+        $this->validate($request,[
+            'Description'=>'required',
+            'Title'=>'required | max:50',
+            'EventDate'=>'required',
+            'Image'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+        $event = new Event;
+        $event->Description = ucwords($request['Description']);
+        $event->Title = ucwords($request['Title']);
+        $event->EventDate = ucwords($request['EventDate']);
+   
+
+        if($request->file('Image'))
+        {
+                        
+            $image = $request->file('Image');
+            $filename = time() . '.' . $image->getClientOriginalExtension();
+            $path = 'assets/images/events/' . $filename;
+          //  return $path;
+            Image::make($image->getRealPath())->resize(400, 400)->save($path);
+            $event->Image = 'assets/images/events/'.$filename;
+        }
+        $event->save();
+        return redirect()->back()->with(['success'=>'Event was created successsfully']);
+
+
     }
 
  
@@ -48,13 +78,51 @@ class EventController extends Controller
      */
     public function edit($id)
     {
-        //
+    
+        try {
+           $event = Event::find($id);
+           return view('event.edit_event', compact('event'));
+        } catch (\Throwable $th) {
+            
+            return redirect()->back()->with(["failure"=>$th->getMessage()]);
+        }
     }
 
 
     public function update(Request $request, $id)
     {
-        //
+        
+       try {
+                $this->validate($request,[
+                    'Description'=>'required',
+                    'Title'=>'required | max:50',
+                    'EventDate'=>'required',
+                    'Image'=> 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+                ]);
+                $event = Event::find($id);
+                $event->Description = ucwords($request['Description']);
+                $event->Title = ucwords($request['Title']);
+                $event->EventDate = ucwords($request['EventDate']);
+        
+
+                if($request->file('Image'))
+                {
+                    File::delete($event->Image);            
+                    $image = $request->file('Image');
+                    $filename = time() . '.' . $image->getClientOriginalExtension();
+                    $path = 'assets/images/events/' . $filename;
+                //  return $path;
+                    Image::make($image->getRealPath())->resize(400, 400)->save($path);
+                    $event->Image = 'assets/images/events/'.$filename;
+                }
+                $event->save();
+                return redirect(url('view/events'))->with(['success'=>'Event was updated successsfully']);
+
+       } catch (\Throwable $th) {
+        return redirect()->back()->with(['failure'=> $th->getMessage()]);
+       }
+
+
     }
 
    
@@ -62,11 +130,12 @@ class EventController extends Controller
     {
         try {
             $event  = Event::find($id);
+            File::delete($event->Image);
             $event->delete();
-            $event->save();
             return redirect()->back()->with(["success"=>"Event deletion was successful"]);
         } catch (\Throwable $th) {
             return redirect()->back()->with(["failure"=> $th->getMessage() ]);
         }
     }
 }
+

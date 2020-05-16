@@ -40,108 +40,98 @@
 
                
 
-              
+                        @php
+                            $i = 1;
+                        @endphp
+                        
+                            @if (  count($events)  > 0)
+                        
+                                @foreach($events as $event)
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">01</div>
+                                        
+                                
+                                        <div class="process-block  col-md-6 col-sm-12 col-xs-12" >
+                                            <div Id="{{$event->id}}" style="height:300px !important" class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
+                                                    <div class="count-box">
+                                                    <div class="count">{{$i++}}</div>
+                                                    </div>
+                                                
+                                                
+                                                    
+                                                    <div class="icon-box" style="margin-top: -20px;padding-left:20px">
+                                                        <img  style="padding-right:20px;float:left; height:200px;" src="{{asset($event->Image)}}"/>
+                                                    </div>
+                                                <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date('d-m-Y H:i:s', strtotime($event->EventDate))}}  </p> 
+                                                    <h5>{{$event->Title}}</h5>
+                                                    <div class="service-text justifytxt" >
+                                                            @php
+                                                                $description = strip_tags($event->Description)
+                                                            @endphp
+                                                          
+                                                             {{  substr($description, 0, 200) }}
+                                                  
+                                                    </div>
+
+                                                    @if (strlen($description) > 200)
+                                                         <div id="readmore"> 
+                                                            <a href="{{url('view/event/'. $event->id)}}" style="color:#fff" data-event-id="{{$event->id}}"  class="btn btn-primary" >Read More >>
+                                                            </a>
+                                                         </div>
+
+                                                    @endif
+
+
+
+                                       
+
+
+
+
+
+                                                    
+                                            </div>
+                                        </div>
+
+
+
+                                
+                                @endforeach
+
+                                <div class="col-md-2 mx-auto"> 
+                                    <div class="text-center"> {{ $events->links() }} </div>
                                 </div>
-                            
-                               
+
                                 
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner4.png"/>
+
+
+
+                            @else 
+
+                                <div style="" class="process-block  col-md-6 mx-auto col-sm-12 col-xs-12">
+                                 <div style="padding-top:20px" class=" inner-box wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1500ms">
+            
+                                     <h1 class="text-center" style="font-size:15px">There are no events yet</h1>
+                                    </div>
                                 </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
 
 
+                            @endif
 
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">02</div>
-                                </div>
-                            
-                               
-                                
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner1.png"/>
-                                </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
-
-
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">03</div>
-                                </div>
-                            
-                               
-                                
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner2.png"/>
-                                </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
-
-
-
-                        <div class="process-block col-md-6 col-sm-12 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">04</div>
-                                </div>
-                            
-                               
-                                
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner3.png"/>
-                                </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
-                
-          
-              
+                    
         </div>
 
 
     </div>
+
  </section>
 
 
 
 @include('_partialpartner')
+    
 
 
 @endsection
+
+
+

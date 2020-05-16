@@ -7,7 +7,7 @@
     </div>
     <div class="four-item-carousel owl-carousel owl-theme owl-nav-style-one owl-dot-none">
     <div class="single-team-member">
-    <img src="assets/images/slider/partner1.png" style="transform:scale(0.5)" alt="Awesome Image" />
+    <img src="{{asset('assets/images/slider/partner1.png')}}" style="transform:scale(0.5)" alt="Awesome Image" />
     <div class="overlay">
     <div class="box">
     <div class="content">
@@ -21,7 +21,7 @@
     </div>
     </div>
     <div class="single-team-member">
-    <img src="assets/images/slider/partner2.png" style="transform:scale(0.5)" alt="Awesome Image" />
+    <img src="{{asset('assets/images/slider/partner2.png')}}" style="transform:scale(0.5)" alt="Awesome Image" />
     <div class="overlay">
     <div class="box">
     <div class="content">
@@ -36,7 +36,7 @@
     </div>
     </div>
     <div class="single-team-member">
-    <img src="assets/images/slider/partner3.png" style="transform:scale(0.5)" alt="Awesome Image" />
+    <img src="{{asset('assets/images/slider/partner3.png')}}" style="transform:scale(0.5)" alt="Awesome Image" />
     <div class="overlay">
     <div class="box">
     <div class="content">
@@ -50,7 +50,7 @@
     </div>
     </div>
     <div class="single-team-member">
-    <img src="assets/images/slider/partner4.png" style="transform:scale(0.5)" alt="Awesome Image" />
+    <img src="{{asset('assets/images/slider/partner4.png')}}" style="transform:scale(0.5)" alt="Awesome Image" />
     <div class="overlay">
     <div class="box">
     <div class="content">

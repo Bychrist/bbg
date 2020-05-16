@@ -9,7 +9,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 <meta name="keywords" content="">
 <meta name="description" content="" />
-<meta property="og:title" content="Aspla is a Powerful Creative Responsive Multi-Purpose HTML5 Template" />
 
 <title>Bristish Business Group</title>
 
@@ -98,7 +97,7 @@
             <li class="{{Request::is('/') ? "current" : ""}} "><a href="{{url('/')}}">Home </a></li>
             <li class="{{Request::is('about') ? "current" : ""}} "><a href="{{url('/about')}}">About BBG</a></li>
             <li class="{{Request::is('membership') ? "current" : ""}}  "><a href="{{url('/membership')}}">Membership</a></li>
-            <li class="{{Request::is('events') ? "current" : ""}}  "><a href="{{url('/events')}}">Events</a></li>
+            <li class="{{Request::is('event') ? "current" : ""}}  "><a href="{{url('/event')}}">Events</a></li>
             <li class="{{Request::is('directory') ? "current" : ""}}  "><a href="{{url('/directory')}}">Directory</a></li>
             <li class="{{Request::is('news') ? "current" : ""}}  "><a href="{{url('/news')}}">News</a></li>
             <li class="{{Request::is('contact') ? "current" : ""}}  "><a href="{{url('/contact')}}">Contact Us</a></li>
@@ -217,8 +216,8 @@
 
 <div class="preloader"></div>
 
-<script src="assets/js/jquery.js"></script>
-<script src="assets/js/jquery-migrate-3.0.0.min.js"></script>
+<script src="{{asset('assets/js/jquery.js')}}"></script>
+<script src="{{asset('assets/js/jquery-migrate-3.0.0.min.js')}}"></script>
 
 <script>
     $(document).ready(function () {
@@ -231,34 +230,37 @@
     });
  </script>
 
-<script src="assets/js/popper.min.js"></script>
-<script src="assets/js/bootstrap.min.js"></script>
-<script src="assets/js/bootstrap-select.min.js"></script>
-<script src="assets/js/jquery.bootstrap-touchspin.js"></script>
+ @yield('scripts')
 
-<script src="assets/js/jquery-ui.js"></script>
+<script src="{{asset('assets/js/popper.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap.min.js')}}"></script>
+<script src="{{asset('assets/js/bootstrap-select.min.js')}}"></script>
+<script src="{{asset('assets/js/jquery.bootstrap-touchspin.js')}}"></script>
 
-<script src="assets/js/owl.carousel.min.js"></script>
 
-<script src="assets/js/jquery.validate.min.js"></script>
+<script src="{{asset('assets/js/jquery-ui.js')}}"></script>
 
-<script src="assets/js/wow.js"></script>
+<script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
 
-<script src="assets/js/jquery.mixitup.min.js"></script>
+<script src="{{asset('assets/js/jquery.validate.min.js')}}"></script>
 
-<script src="assets/js/jquery.fancybox.pack.js"></script>
+<script src="{{asset('assets/js/wow.js')}}"></script>
 
-<script src="assets/js/nouislider.js"></script>
+<script src="{{asset('assets/js/jquery.mixitup.min.js')}}"></script>
 
-<script src="assets/js/isotope.js"></script>
+<script src="{{asset('assets/js/jquery.fancybox.pack.js')}}"></script>
 
-<script src="assets/js/jquery.appear.js"></script>
+<script src="{{asset('assets/js/nouislider.js')}}"></script>
 
-<script src="assets/js/jquery.countTo.js"></script>
+<script src="{{asset('assets/js/isotope.js')}}"></script>
 
-<script src="assets/js/imagezoom.js"></script>
+<script src="{{asset('assets/js/jquery.appear.js')}}"></script>
 
-<script src="assets/js/custom.js"></script>
+<script src="{{asset('assets/js/jquery.countTo.js')}}"></script>
+
+<script src="{{asset('assets/js/imagezoom.js')}}"></script>
+
+<script src="{{asset('assets/js/custom.js')}}"></script>
 
 
 
