@@ -1,73 +1,100 @@
+
+
+
 @extends('layouts.app')
 
 @section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Login') }}</div>
 
-                <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
-                        @csrf
+<section class="">
+<div class="banner" style="background: linear-gradient(to bottom, rgba(22, 22, 22, 0.66), rgba(11, 27, 252, 0.116)), url('{{asset("assets/images/slider/1.jpg")}}');height:500px;background-attachment:fixed">
 
-                        <div class="form-group row">
-                            <label for="email" class="col-md-4 col-form-label text-md-right">{{ __('E-Mail Address') }}</label>
+        <div class="row">
+            <div class="container">
+                <div class="centerbanner">
+                        <div class="wel">
 
-                            <div class="col-md-6">
-                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
-                                @error('email')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
-
-                                @error('password')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
-                            </div>
-                        </div>
-
-                        <div class="form-group row">
-                            <div class="col-md-6 offset-md-4">
-                                <div class="form-check">
-                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
-
-                                    <label class="form-check-label" for="remember">
-                                        {{ __('Remember Me') }}
-                                    </label>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="form-group row mb-0">
-                            <div class="col-md-8 offset-md-4">
-                                <button type="submit" class="btn btn-primary">
-                                    {{ __('Login') }}
-                                </button>
-
-                                @if (Route::has('password.request'))
-                                    <a class="btn btn-link" href="{{ route('password.request') }}">
-                                        {{ __('Forgot Your Password?') }}
-                                    </a>
-                                @endif
-                            </div>
-                        </div>
-                    </form>
+                      
+                            <h3 class="text-center">This  is British Business Group</h3>
+                            <h1 class="text-center">
+                                BBG Member Login
+                            </h1>
+                     </div>
                 </div>
             </div>
         </div>
+   
+   
     </div>
-</div>
+</section>
+
+
+
+
+<section class="loginsection">
+     <div class="row">
+       
+             <div class="col-md-3"></div>
+             <div class="col-md-6">
+
+               
+
+                    
+                    <div class="disclaimer">
+                        This area of our website is for individual or company members
+                        of the BBG. If you would like to know more about becoming
+                        a member please email us at  <strong>info@bbgdxb.com</strong> or go to <strong>Membership</strong>
+                   </div>
+
+                    <div class="col-md-8 offset-md-2  login wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;">
+
+                  
+                      <div class="sec-title center">
+                        <h2>Member <span> Login</span></h2>
+                        </div>
+
+                         <form method="POST" action="{{ route('login') }}">
+                         @csrf
+                            <div class="form-group">
+                                <input type="email" class="form-control forminput" name="email" placeholder="please enter email">
+                                    <small class="text-danger"> {{ $errors->first('email') }} </small>
+                            </div>
+                            <div class="form-group">
+                                <input type="password" name="password" class="form-control forminput" placeholder="please enter password">
+                                <small class="text-danger"> {{ $errors->first('password') }} </small>
+                            </div>
+
+                            <input type="submit" class="submitbtn" value="Sign In">
+
+                            <input style="margin-top:9px;" class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+
+                            <label class="form-check-label" for="remember">
+                                {{ __('Remember Me') }}
+                            </label>
+                    
+                            @if (Route::has('password.request'))
+                                <a style="color:#66c;font-size:12px" class="btn btn-link" href="{{ route('password.request') }}">
+                                    {{ __('Forgot Your Password?') }}
+                                </a>
+                            @endif
+                       
+                    
+
+                        </form>
+                      
+                  
+
+                    </div>
+
+
+             </div>
+             <div class="col-md-3"></div>
+        
+     </div>
+</section>
+
+
+
+@include('_partialpartner')
+
+
 @endsection

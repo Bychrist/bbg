@@ -64,13 +64,19 @@
         <ul class="social-style-one float_right" style="padding-bottom: -10px;">
 
         <li>
-        <a href="{{url('member/login')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one"> <i class="fa fa-user" aria-hidden="true"></i> MEMBERSHIP LOGIN</a>
-        
+         @if(!Auth::check()) 
+        <a href="{{url('/login')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one"> <i class="fa fa-user" aria-hidden="true"></i> MEMBERSHIP LOGIN</a>
+        @endif
 
         </li>
         <li>
+                @if(!Auth::check()) 
+                <a href="{{url('/register')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one">APPLY FOR MEMBERSHIP</a>
+                @endif
 
-                <a href="javascript:void(0)" style="font-size: 10px !important;padding:5px" class="btn-style-one">APPLY FOR MEMBERSHIP</a>
+                 @if(Auth::check()) 
+                <a href="{{url('/home')}}" style="font-size: 10px !important;padding:5px" class="btn-style-one">Go To Admin</a>
+                @endif
         
         </li>
         </ul>

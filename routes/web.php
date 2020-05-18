@@ -2,49 +2,57 @@
 
 use Illuminate\Support\Facades\Route;
 
-/*
-|--------------------------------------------------------------------------
-| Web Routes
-|--------------------------------------------------------------------------
-|
-| Here is where you can register web routes for your application. These
-| routes are loaded by the RouteServiceProvider within a group which
-| contains the "web" middleware group. Now create something great!
-|
-*/
 
+Auth::routes(['verify' => true]);
+
+// =============== Page routes
 Route::get('/', function () {
     return view('welcome');
 });
-
 Route::get('/about', 'PageController@About')->name('About');
-
-// ============== event
 Route::get('/event', 'PageController@Event');
 Route::get('view/event/{id}',  'PageController@EventShow');
-
-//
-
-
-Route::get('/member/login', 'PageController@MemberLogin')->name('MemberLogin');
 Route::get('/news', 'PageController@News')->name('News');
 Route::get('/contact', 'PageController@Contact')->name('Contact');
 Route::get('/membership','PageController@Membership')->name('Membership');
+//================== end page routes
 
-Auth::routes();
 
 
 // =====================admin routes
-
-/* the event routes */
 Route::get('/home', 'HomeController@index')->name('home');
-Route::get('view/events', 'EventController@index');
-Route::get('create/event', 'EventController@create');
-Route::post('store/event', 'EventController@store' );
-Route::get('edit/event/{id}', 'EventController@edit' );
-Route::post('update/event/{id}', 'EventController@update' );
-Route::get('delete/event/{id}', 'EventController@destroy' );
+
+Route::middleware(['Admin'])->group(function () {
+
 /* the event routes */
+    Route::get('view/events', 'Admin\EventController@index');
+    Route::get('create/event', 'Admin\EventController@create');
+    Route::post('store/event', 'Admin\EventController@store' );
+    Route::get('edit/event/{id}', 'Admin\EventController@edit' );
+    Route::post('update/event/{id}', 'Admin\EventController@update' );
+    Route::get('delete/event/{id}', 'Admin\EventController@destroy' );
+ /* the event routes */ 
+ 
+ 
+
+/* the members routes */
+    Route::get('view/members', 'Admin\MemberController@index');
+/* the end of members routes */
+
+
+/* the profile routes */
+
+Route::get('admin/view/profile/{id}', 'Admin\ProfileController@show');
+
+
+/*  the end of profile routes */
+
+
+
+
+
+
+});
 
 
 
@@ -53,5 +61,6 @@ Route::get('delete/event/{id}', 'EventController@destroy' );
 
 
 
+//=====================end admin routes
 
-//=======================admin routes
+

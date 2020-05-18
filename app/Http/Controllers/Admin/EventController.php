@@ -1,11 +1,13 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
+use App\Http\Controllers\Controller;
 
+use File;
 use Image;
+use DateTime;
 use App\Event;
 use Illuminate\Http\Request;
-use File;
 
 
 class EventController extends Controller
@@ -40,11 +42,13 @@ class EventController extends Controller
      */
     public function store(Request $request)
     {
+   
+     
 
         $this->validate($request,[
             'Description'=>'required',
             'Title'=>'required | max:50',
-            'EventDate'=>'required',
+            'EventDate'=>'required |after:yesterday',
             'Image'=> 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048'
         ]);
         $event = new Event;
@@ -91,20 +95,25 @@ class EventController extends Controller
 
     public function update(Request $request, $id)
     {
+
+        $this->validate($request,[
+            'Description'=>'required',
+            'Title'=>'required | max:50',
+            'EventDate'=>'required |after:yesterday',
+            'Image'=> 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
+        ]);
+     
         
        try {
-                $this->validate($request,[
-                    'Description'=>'required',
-                    'Title'=>'required | max:50',
-                    'EventDate'=>'required',
-                    'Image'=> 'image|mimes:jpeg,png,jpg,gif,svg|max:2048'
-                ]);
+             
+
+              
                 $event = Event::find($id);
                 $event->Description = ucwords($request['Description']);
                 $event->Title = ucwords($request['Title']);
                 $event->EventDate = ucwords($request['EventDate']);
         
-
+             
                 if($request->file('Image'))
                 {
                     File::delete($event->Image);            

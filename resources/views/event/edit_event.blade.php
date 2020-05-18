@@ -13,14 +13,18 @@
                             <div class="form-group">
                                 <label class="small mb-1" for="title">Title</label>
                                 <input class="form-control py-4" id="title" value="{{$event->Title}}" required name="Title" type="text" placeholder="Enter title" />
+                                       <small class="text-danger">{{ $errors->first('Title') }}  </small>
                             </div>
                              <div class="form-group">
                                 <label class="small mb-1" for="event_date">Event Date</label>
                                 <input class="form-control py-4" id="event_date" value="{{$event->EventDate}}" name="EventDate" required type="datetime-local" placeholder="Choose date" />
+                                  <small class="text-danger">{{ $errors->first('EventDate') }}  </small>
+                                
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="event_date">Image</label>
                                 <input class="form-control py-4" id="event_date" name="Image" type="file"  />
+                                  <small class="text-danger">{{ $errors->first('Image') }}  </small>
                             </div>
 
                              <div class="form-group">
@@ -30,6 +34,7 @@
                                  <textarea class="form-control py-4" name="Description" id="decription" rows="3">
                                   {{ $event->Description}}
                                  </textarea>
+                                   <small class="text-danger">{{ $errors->first('Description') }}  </small>
                                </div>
                             </div>
                       

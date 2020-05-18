@@ -12,8 +12,8 @@
                         <div class="wel">
 
                       
-                           <center> <h3>We Increase Your Network And <br> Business Opportunities</h3></center>
-                            <h1>
+                           <h3 class="text-center" >We Increase Your Network And <br> Business Opportunities</h3>
+                            <h1 class="text-center">
                                 BRITISH BUSINESS GROUP
                             </h1>
                      </div>

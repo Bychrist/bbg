@@ -12,22 +12,26 @@
                             @csrf
                             <div class="form-group">
                                 <label class="small mb-1" for="title">Title</label>
-                                <input class="form-control py-4" id="title" required name="Title" type="text" placeholder="Enter title" />
+                                <input class="form-control py-4" id="title" value="{{old('Title')}}" required name="Title" type="text" placeholder="Enter title" />
+                                <small class="text-danger">{{ $errors->first('Title') }}  </small>
                             </div>
                              <div class="form-group">
                                 <label class="small mb-1" for="event_date">Event Date</label>
-                                <input class="form-control py-4" id="event_date" name="EventDate" required type="datetime-local" placeholder="Choose date" />
+                                <input class="form-control py-4" id="event_date" value="{{old('EventDate')}}" name="EventDate" required type="datetime-local" placeholder="Choose date" />
+                                <small class="text-danger">{{ $errors->first('EventDate') }}  </small>
                             </div>
                             <div class="form-group">
                                 <label class="small mb-1" for="event_date">Image</label>
                                 <input class="form-control py-4" id="event_date" name="Image" type="file"  />
+                                <small class="text-danger">{{ $errors->first('Image') }}  </small>
                             </div>
 
                              <div class="form-group">
                               
                                <div class="form-group">
                                 <label class="small mb-1" for="decription">Description</label>
-                                 <textarea class="form-control py-4" name="Description" id="decription" rows="3"></textarea>
+                                 <textarea class="form-control py-4" name="Description"  id="decription" rows="3">{{old('Description')}}</textarea>
+                                 <small class="text-danger">{{ $errors->first('Description') }}  </small>
                                </div>
                             </div>
                       
