@@ -40,6 +40,7 @@ class HomeController extends Controller
               return view('admin.adminhome',compact('events','r_members','v_members'));
         }
         else{
+            
 
            return  view('user.userhome');
         }

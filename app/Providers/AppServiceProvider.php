@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Profile;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -23,6 +25,8 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        view()->composer('*', function ($view) {
+            $view->with('userProfile',  Auth::User());
+        });
     }
 }

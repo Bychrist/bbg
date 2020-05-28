@@ -10212,3 +10212,23 @@ body {
 .sb-sidenav-light .sb-sidenav-footer {
   background-color: #e9ecef;
 }
+
+.mybg{
+  background-image:url(../assets/img/bg.jpg) !important ;
+  height:100vh;
+  background-attachment: fixed;
+  background-size: cover; 
+}
+
+.white{
+  color:white;
+  font-weight: bolder;
+}
+
+input{
+  text-align: left;
+}
+
+.table-responsive{
+  display:table;
+}

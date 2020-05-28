@@ -11,7 +11,7 @@
         <link href="https://cdn.datatables.net/1.10.20/css/dataTables.bootstrap4.min.css" rel="stylesheet" crossorigin="anonymous" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/js/all.min.js" crossorigin="anonymous"></script>
     </head>
-    <body class="sb-nav-fixed">
+    <body class="sb-nav-fixed mybg">
         <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
             <a class="navbar-brand" href="">Welcome {{Auth::user()->name}}</a><button class="btn btn-link btn-sm order-1 order-lg-0" id="sidebarToggle" href="#"><i class="fas fa-bars"></i></button
             ><!-- Navbar Search-->
@@ -26,7 +26,13 @@
             <!-- Navbar-->
             <ul class="navbar-nav ml-auto ml-md-0">
                 <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
+                    <a class="nav-link dropdown-toggle" id="userDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        @if($userProfile->profile == null)
+                            <i class="fas fa-user fa-fw"></i>
+                        @else   
+                             <img style="width:50px;height:50px; border-radius:50%" src="{{asset($userProfile->profile->personalImage)}}" >
+                        @endif
+                    </a>
                     <div class="dropdown-menu dropdown-menu-right" aria-labelledby="userDropdown">
                      
                         <div class="dropdown-divider"></div>
@@ -63,8 +69,8 @@
                             ></a>
                             <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
                                 <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="">Update Profile</a>
-                                <a class="nav-link" href="">View Profile</a>
+                                <a class="nav-link" href="{{url('profile-update')}}">Update Profile</a>
+                                <a class="nav-link" href="{{url('view/profile')}}">View Profile</a>
                               
                             </div>
 
@@ -81,9 +87,9 @@
                     </div>
                 </nav>
             </div>
-            <div id="layoutSidenav_content">
-                <main>
-                    <div class="container-fluid">
+            <div id="layoutSidenav_content" >
+                <main class="">
+                    <div class="container-fluid " >
                        @include('layouts.message')
                         @yield('content')
                     </div>

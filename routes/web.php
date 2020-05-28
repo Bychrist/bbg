@@ -48,19 +48,22 @@ Route::get('admin/view/profile/{id}', 'Admin\ProfileController@show');
 /*  the end of profile routes */
 
 
-
-
-
-
 });
-
-
-
-
-
-
 
 
 //=====================end admin routes
 
 
+
+//================== user routes
+
+Route::middleware(['User'])->group(function () {
+
+   Route::get('profile-update', 'users\ProfileController@UpdateProfile');
+   Route::post('create/profile', 'users\ProfileController@CreateProfile');
+   Route::get('view/profile', 'users\ProfileController@ViewProfile');
+
+});
+
+
+//end user routes
