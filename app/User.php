@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\News;
 use App\Profile;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -44,6 +45,12 @@ class User extends Authenticatable  implements MustVerifyEmailContract
     public function profile()
     {
 	return $this->hasOne(Profile::class, 'user_id');
+    }
+
+
+    public function news()
+    {
+        return $this->hasMany(News::class,'user_d');
     }
 
 

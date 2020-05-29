@@ -62,6 +62,12 @@ Route::middleware(['User'])->group(function () {
    Route::get('profile-update', 'users\ProfileController@UpdateProfile');
    Route::post('create/profile', 'users\ProfileController@CreateProfile');
    Route::get('view/profile', 'users\ProfileController@ViewProfile');
+   Route::get('user/create-news', 'users\NewsController@CreateNews');
+   Route::post('create/news/article', 'users\NewsController@StoreNews');
+   Route::get('view/news/article', 'users\NewsController@ViewNews');
+   Route::get('update/article/{id}', 'users\NewsController@UpdateNews');
+   Route::post('update/news/article/{id}','users\NewsController@UpdateNewsArticle');
+   Route::get('delete/article/{id}', 'users\NewsController@DeleteNewsArticle');
 
 });
 

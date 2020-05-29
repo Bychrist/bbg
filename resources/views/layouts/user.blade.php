@@ -74,6 +74,18 @@
                               
                             </div>
 
+                               <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#news" aria-expanded="false" aria-controls="news"
+                                ><div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
+                                    News Article
+                                <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div
+                            ></a>
+                            <div class="collapse" id="news" aria-labelledby="headingOne" data-parent="#sidenavAccordion">
+                                <nav class="sb-sidenav-menu-nested nav">
+                                <a class="nav-link" href="{{url('user/create-news')}}">Create News</a>
+                                <a class="nav-link" href="{{url('view/news/article')}}">View Created News</a>
+                              
+                            </div>
+
                          
                        
                         

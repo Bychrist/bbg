@@ -47,7 +47,7 @@
 
 
 </head>
-<body>
+<body class="mybg">
 <div class="boxed_wrapper">
 
 <header class="top-bar" style="background:#fff;">

@@ -24,10 +24,7 @@ class AddNullables extends Migration
             $table->string('companyWebsite')->nullable()->change();
             $table->string('companyAddress')->nullable()->change();
             $table->string('industryType')->nullable()->change();
-            $table->text('companyCorporateProfile')->nullable()->change();
-
-
-            
+            $table->text('companyCorporateProfile')->nullable()->change();        
             $table->dropColumn(['passportNumber','passportExpiryDate','shortArticle']);
     
         });

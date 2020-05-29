@@ -24,7 +24,7 @@
                                 <div class="card bg-success text-white mb-4">
                                     <div class="card-body">Posted News</div>
                                     <div class="card-footer d-flex align-items-center justify-content-between">
-                                        <span class="small text-white stretched-link" > 20</span>
+                                        <span class="small text-white stretched-link" > {{$news->count()}}</span>
                                         <div class="small text-white"><i class="fas fa-angle-right"></i></div>
                                     </div>
                                 </div>
