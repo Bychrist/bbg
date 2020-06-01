@@ -5,7 +5,7 @@
     <div class="col-xl-12 col-md-12">
         <div class="cardtext-white mb-4">
                 @include('layouts.message')
-               <table class="table table-striped" id="dataTable" width="100%" cellspacing="0">
+               <table class="table table-striped white" id="dataTable" width="100%" cellspacing="0">
                                         <thead>
                                             <tr>
                                                 <th>Name</th>
@@ -38,8 +38,10 @@
                                                      $user->name . ' is not activated' }}" > 
                                                </td>
                                                 <td>{{$user->created_at}}</td>
-                                                <td> <a  class="btn btn-primary" href="{{url('admin/view/profile/' . $user->id  )}}" title="view member profile"> <i class="fa fa-eye"></i> </a> </td>
-                                                <td><a href="" title="delete member profile" class="btn btn-danger"> <i class="fa fa-trash"> </i></a></td>
+                                                <td>
+                                                 <a  class="btn btn-primary" href="{{url('admin/view/profile/' . $user->id  )}}" title="view member profile"> <i class="fa fa-eye"></i> </a>
+                                                 </td>
+                                                <td><a href="{{url('admin/delete/user/'.$user->id)}}" onclick="return confirm('Are you sure you want to delete this user?')" title="delete member profile" class="btn btn-danger"> <i class="fa fa-trash"> </i></a></td>
                                             </tr>
                                          @endforeach
                                          

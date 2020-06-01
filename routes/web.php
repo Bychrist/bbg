@@ -6,13 +6,13 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 
 // =============== Page routes
-Route::get('/', function () {
-    return view('welcome');
-});
+
+Route::get('/', 'PageController@Home')->name('Home');
 Route::get('/about', 'PageController@About')->name('About');
 Route::get('/event', 'PageController@Event');
 Route::get('view/event/{id}',  'PageController@EventShow');
 Route::get('/news', 'PageController@News')->name('News');
+Route::get('/news/view/{id}', 'PageController@NewsSingle');
 Route::get('/contact', 'PageController@Contact')->name('Contact');
 Route::get('/membership','PageController@Membership')->name('Membership');
 //================== end page routes
@@ -43,6 +43,8 @@ Route::middleware(['Admin'])->group(function () {
 /* the profile routes */
 
 Route::get('admin/view/profile/{id}', 'Admin\ProfileController@show');
+Route::get('admin/activate/member/{activate}/{id}', 'Admin\ProfileController@Activate');
+Route::get('admin/delete/user/{id}', 'Admin\ProfileController@DeleteUser');
 
 
 /*  the end of profile routes */

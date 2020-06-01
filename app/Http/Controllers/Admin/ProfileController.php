@@ -6,7 +6,7 @@ use App\User;
 use App\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-
+use File;
 class ProfileController extends Controller
 {
    
@@ -22,15 +22,6 @@ class ProfileController extends Controller
         //
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
-    {
-        //
-    }
 
     /**
      * Store a newly created resource in storage.
@@ -52,50 +43,68 @@ class ProfileController extends Controller
     public function show($id)
     {
         try {
+           // return "sadf";
+           // $userAccount = User::findOrFail($id);
+            $user = Profile::where('user_id', $id)->firstOrFail();
 
-            $user = User::findOrFail($id);
-            $profile = Profile::where('user_id', $id)->firstOrFail();
-            return view('admin.adminShowProfile',compact('profile'));
+            return view('admin.adminShowProfile',compact('user'));
 
         } catch (\Throwable $th) {
 
-            return redirect()->back()->with(["failure" =>  $user->name . " is yet to set up profile"] );
+            return redirect()->back()->with(["failure" =>  "User is yet to set up profile"] );
 
         }
 
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function Activate($activate, $id)
     {
-        //
+           try {
+               $user = User::findOrFail($id);
+               if($activate == 0)
+               {
+                   $user->activated = 1;
+               }
+               elseif($activate == 1)
+               {
+                   $user->activated = 0;
+               }
+
+               $user->save();
+               return redirect()->back()->with(["success" =>"User activation status has been changed" ]);
+
+           } catch (\Throwable $th) {
+
+           // return dd($th->getMessage());
+              return redirect()->back()->with(["failure" => $th->getMessage() ]);
+           }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+
+    public function DeleteUser($id)
     {
-        //
+        try {
+         
+            $user = Profile::findOrFail($id);
+            File::delete($user->personalImage);
+            File::delete($user->user->passport);
+            $user->delete();
+            $user->user->delete();
+            return redirect(url('view/members'))->with(["success" =>"All user records have been deleted" ]);
+
+        } catch (\Throwable $th) {
+            //throw $th;
+        }
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
-    }
+
+
+
+
+
+
+
+
+
+
 }

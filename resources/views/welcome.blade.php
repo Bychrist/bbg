@@ -128,54 +128,38 @@
         
         <div class="row paddMedia">
             
+            @foreach ($events as $event)
+                
+           
    
-
                         <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                 <div class="count-box">
-                                <div class="count">01</div>
+                                <div class="count"><i class="fa fa-folder"></i>  </div>
                                 </div>
                             
                                
                                 
                                 <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner4.png"/>
+                                    @if ($event->Image != null)
+                                        <img  style="padding-right:20px;float:left; height:200px;" src="{{asset($event->Image)}}"/>
+                                    @else
+                                        <img  style="padding-right:20px;float:left; height:200px;" src="{{asset('articles/event.jfif')}}"/>
+                                    @endif
                                 </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
-
-
-
-
-                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">04</div>
+                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date('d-m-Y  H:i:s', strtotime($event->EventDate))}} </p>
+                                <h5>{{$event->Title}}</h5>
+                                <div class="service-text justifytxt" >
+                                    {!! $event->Description !!}
                                 </div>
-                            
-                               
-                                
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner3.png"/>
-                                </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
+                                <a href="{{url('view/event/'.$event->id)}}"  class="readbtn" >Read More >></a>
                             
                                 
                                 
                            </div>
                         </div>
                 
-          
+           @endforeach
               
         </div>
 
@@ -197,11 +181,9 @@
         <div class="row paddMedia">
             
                
-               
-
-               
-
-              
+               @foreach ($news as $new)
+                   
+          
 
                         <div class="process-block col-md-6 col-sm-6 col-xs-12">
                             <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
@@ -209,44 +191,30 @@
                                 <div class="count">&nbsp;</div>
                                 </div>
                             
-                               
+                           
                                 
                                 <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner4.png"/>
+                                        @if($new->featuredImage == null)
+                                             <img  style="padding-right:20px;float:left; height:200px;"
+                                        src="{{  asset('assets/images/events/journal.jpg')   }}"/>
+                                        @elseif($new->featuredImage != null)
+                                            <img  style="padding-right:20px;float:left; height:200px;"
+                                        src="{{  asset($new->featuredImage)   }}"/>
+                                        @endif
                                 </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
+                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date('d-m-Y  H:i:s', strtotime($new->EventDate))}}</p>
+                                <h5>{{$new->title}}</h5>
+                                <div class="service-text justifytxt" >
+                                    {!! $new->body !!}
+                                </div>
+                                <a href="{{url('news/view/'.$new->id)}}"  class="readbtn" >Read More >></a>
                             
                                 
                                 
                            </div>
                         </div>
 
-
-                        
-
-                        <div class="process-block col-md-6 col-sm-6 col-xs-12">
-                            <div class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
-                                <div class="count-box">
-                                <div class="count">&nbsp;</div>
-                                </div>
-                            
-                               
-                                
-                                <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                    <img  style="padding-right:20px;float:left; height:200px;" src="assets/images/slider/partner3.png"/>
-                                </div>
-                               <p> <i class="fa fa-calendar" aria-hidden="true"></i> Tue, 21 Jun, 2020</p>
-                                <h5>WEBINAR: USING THE POWER OF STORY TO EMERGE STRONG</h5>
-                                <div class="service-text justifytxt" >Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,</div>
-                                <a href=""  class="readbtn" >Read More >></a>
-                            
-                                
-                                
-                           </div>
-                        </div>
+           @endforeach
                 
           
               

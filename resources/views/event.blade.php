@@ -53,7 +53,7 @@
                                         <div class="process-block  col-md-6 col-sm-12 col-xs-12" >
                                             <div Id="{{$event->id}}" style="height:300px !important" class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
                                                     <div class="count-box">
-                                                    <div class="count">{{$i++}}</div>
+                                                    <div class="count"><i class="fa fa-folder" ></i></div>
                                                     </div>
                                                 
                                                 
@@ -98,7 +98,7 @@
                                 @endforeach
 
                                 <div class="col-md-2 mx-auto"> 
-                                    <div class="text-center"> {{ $events->links() }} </div>
+                                    <div class="text-center"> </div>
                                 </div>
 
                                 
