@@ -14,7 +14,7 @@
                       
                            <center> <h3>Latest News</h3></center>
                             <h1>
-                                BBG News
+                                {{$new->title}}
                             </h1>
                      </div>
                 </div>
@@ -48,7 +48,6 @@
     <div class="col-lg-8 col-md-8 col-sm-12 m-order-2">
     <section class="blog-section padd-2 m-padd-0">
  
-        @foreach ( $bbg_articles as $new)
             <div class="large-blog-news wow fadeInUp animated" style="visibility: visible; animation-name: fadeInUp;">
             <div class="img-box">
                      @if($new->featuredImage == null)
@@ -67,23 +66,14 @@
                     </a>
                 </h4>
                 <div class="text text-justify">
-                      {{  substr(strip_tags($new->body),0,200)    }}
+                      {!! $new->body   !!}
                  
                 </div>
-                <div class="link-btn">
-                    @if ( strlen(strip_tags($new->body)) > 200  ) 
-                        [...]<br/>
-                        <a href="{{url('news/view/'.$new->id)}}"  class="btn-style-one" >Read More >></a>
-                    @else
-                        
-                    @endif
-              
-                </div>
+             
             </div>
         </div>
-        @endforeach
-        
-      {{ $bbg_articles->links()}}
+ 
+
     </section>
     </div>
     <div class="col-lg-4 col-md-4 col-sm-12 m-order-1">

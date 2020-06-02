@@ -40,15 +40,13 @@
 
                
 
-                        @php
-                            $i = 1;
-                        @endphp
+                   
                         
-                            @if (  count($events)  > 0)
+                            @if (  count($bbg_events)  > 0)
                         
-                                @foreach($events as $event)
+                                @foreach($bbg_events as $event)
 
-                                        
+                                    
                                 
                                         <div class="process-block  col-md-6 col-sm-12 col-xs-12" >
                                             <div Id="{{$event->id}}" style="height:300px !important" class="inner-box wow fadeInLeft animated" data-wow-delay="0ms" data-wow-duration="1500ms" style="visibility: visible; animation-duration: 1500ms; animation-delay: 0ms; animation-name: fadeInLeft;padding-bottom:60px;padding-top:80px;">
@@ -59,9 +57,13 @@
                                                 
                                                     
                                                     <div class="icon-box" style="margin-top: -20px;padding-left:20px">
-                                                        <img  style="padding-right:20px;float:left; height:200px;" src="{{asset($event->Image)}}"/>
+                                                        @if ($event->Image != null)
+                                                            <img  style="padding-right:20px;float:left; height:200px;" src="{{asset($event->Image)}}"/>
+                                                        @else
+                                                            <img  style="padding-right:20px;float:left; height:200px; width:200px;" src="{{asset('articles/event.jfif')}}" />
+                                                        @endif
                                                     </div>
-                                                <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date('d-m-Y H:i:s', strtotime($event->EventDate))}}  </p> 
+                                                <p> <i class="fa fa-calendar" aria-hidden="true"></i> {{date('F d Y, g:iA', strtotime($event->EventDate))}}  </p> 
                                                     <h5>{{$event->Title}}</h5>
                                                     <div class="service-text justifytxt" >
                                                             @php
@@ -98,7 +100,7 @@
                                 @endforeach
 
                                 <div class="col-md-2 mx-auto"> 
-                                    <div class="text-center"> </div>
+                                    <div class="text-center">{{$bbg_events->links()}} </div>
                                 </div>
 
                                 

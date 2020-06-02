@@ -50,7 +50,7 @@ class User extends Authenticatable  implements MustVerifyEmailContract
 
     public function news()
     {
-        return $this->hasMany(News::class,'user_d');
+        return $this->hasMany(News::class,'user_id');
     }
 
 

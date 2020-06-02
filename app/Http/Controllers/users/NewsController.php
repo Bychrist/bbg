@@ -22,8 +22,8 @@ class NewsController extends Controller
     {
         if( Gate::allows('activatedUser',Auth::user()))
         {       $id = Auth::user()->id;
-                $news = News::where('user_id',$id)->orderBy('created_at','desc')->paginate(10);
-                return view('user.viewarticles', compact('news'));
+                $bbg_news = News::where('user_id',$id)->orderBy('created_at','desc')->paginate(10);
+                return view('user.viewarticles', compact('bbg_news'));
 
         }
 

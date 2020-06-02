@@ -11,9 +11,9 @@ class PageController extends Controller
  
     public function Home()
     {
-        $events = Event::orderBy('created_at','desc')->take(2)->get();
-        $news = News::orderBy('created_at','desc')->where('publish','on')->take(2)->get();
-        return view('welcome',compact('events','news'));
+        $bbg_events = Event::orderBy('EventDate','desc')->take(2)->get();
+        $bbg_news = News::orderBy('created_at','desc')->where('publish','on')->take(2)->get();
+        return view('welcome',compact('bbg_events','bbg_news'));
     }
 
     public function About()
@@ -23,8 +23,10 @@ class PageController extends Controller
 
     public function Event()
     {
-        $events = Event::latest()->paginate(2);
-        return view('event',compact('events'));
+     
+        $bbg_events = Event::orderBy('EventDate','desc')->paginate(10);
+        // dd($events);
+        return view('event',compact('bbg_events'));
     }
 
 
@@ -47,12 +49,24 @@ class PageController extends Controller
 
     public function News()
     {
-        return view('news');
+        $bbg_news = News::orderBy('created_at','desc')->where('publish','on')->take(3)->get();
+        $bbg_articles = News::orderBy('created_at','desc')->where('publish','on')->paginate(10);
+        $bbg_events = Event::orderBy('EventDate','desc')->take(3)->get();
+
+        return view('news',compact('bbg_news','bbg_events','bbg_articles'));
     }
 
-    public function NewsSingle()
+    public function NewsSingle($id)
     {
-        return "News single here";
+       try {
+                $bbg_news = News::orderBy('created_at','desc')->where('publish','on')->take(3)->get();
+                $new = News::where('id',$id)->firstOrFail();
+                $bbg_events = Event::orderBy('EventDate','desc')->take(3)->get();
+                return view('newssingle',compact('bbg_news','new','bbg_events'));
+       } catch (\Throwable $th) {
+           
+                return redirect()->back();
+       }
     }
 
     public function Contact()
@@ -64,6 +78,11 @@ class PageController extends Controller
     public function Membership()
     {
         return view('membership');
+    }
+
+    public function directory()
+    {
+        return view('directory');
     }
 
 

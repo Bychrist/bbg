@@ -14,7 +14,7 @@
                             <th>Feature Image</th>
                             <th>Action</th>
                         </tr>
-                        @foreach ($news->all()  as $new)
+                        @foreach ($bbg_news  as $new)
                             <tr>
                                 <td>{{$new->title}}</td>
                                 <td> 
@@ -41,7 +41,7 @@
                             </tr>
                         @endforeach
                         <tr>
-                             <td colspan="5" > <center>{{$news->links()}}</center>   </td>
+                             <td colspan="5" > <center>{{$bbg_news->links()}}</center>   </td>
                         </tr>
                     </table>
 

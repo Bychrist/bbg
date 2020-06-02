@@ -51,7 +51,7 @@
                                                         <img  style="padding-right:20px;float:left; height:200px;" src="{{asset($event->Image)}}"/>
                                                     </div>
                                     
-                                                    <h5><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{date('d-m-Y  H:i:s', strtotime($event->EventDate))}} </h5>
+                                                    <h5><i class="fa fa-calendar" aria-hidden="true"></i> Date: {{date('F d, Y  g:iA', strtotime($event->EventDate))}} </h5>
                                                     <div class="service-text justifytxt" >
                                                      {!! $event->Description !!}
                                                            

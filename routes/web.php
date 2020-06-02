@@ -10,6 +10,7 @@ Auth::routes(['verify' => true]);
 Route::get('/', 'PageController@Home')->name('Home');
 Route::get('/about', 'PageController@About')->name('About');
 Route::get('/event', 'PageController@Event');
+Route::get('/directory', 'PageController@directory');
 Route::get('view/event/{id}',  'PageController@EventShow');
 Route::get('/news', 'PageController@News')->name('News');
 Route::get('/news/view/{id}', 'PageController@NewsSingle');

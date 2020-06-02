@@ -2,11 +2,13 @@
 
 namespace App\Http\Controllers\Admin;
 
+use File;
+use App\News;
 use App\User;
 use App\Profile;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
-use File;
+
 class ProfileController extends Controller
 {
    
@@ -83,17 +85,30 @@ class ProfileController extends Controller
 
     public function DeleteUser($id)
     {
+    
         try {
          
             $user = Profile::findOrFail($id);
             File::delete($user->personalImage);
             File::delete($user->user->passport);
+  
+            foreach($user->user->news as $news  )
+            {
+                $findNews = News::findOrFail($news->id);
+                if($news->featuredImage != null)
+                {
+                    File::delete($news->featuredImage);
+                }
+                $findNews->delete();
+                    
+            }
             $user->delete();
             $user->user->delete();
+       
             return redirect(url('view/members'))->with(["success" =>"All user records have been deleted" ]);
 
         } catch (\Throwable $th) {
-            //throw $th;
+           return $th->getMessage();
         }
     }
 
